@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class NPCInteractable : MonoBehaviour
 {
+  NPCDialogue npcDialogue;
+  
     public void Interact(){
       Debug.Log("Interact!");
     }

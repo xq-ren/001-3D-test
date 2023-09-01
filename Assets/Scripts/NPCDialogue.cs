@@ -14,7 +14,19 @@ public class NPCDialogue : MonoBehaviour
 
     void Update()
     {
+      if (dialoguePanel.activeInHierarchy) {
+        zeroText();
+      } else {
+        dialoguePanel.SetActive(true);
+        StartCoroutine(Typing());
+      }
 
+    }
+
+    public void zeroText(){
+      dialogueText.text = "";
+      index = 0;
+      dialoguePanel.SetActive(false);
     }
 
     IEnumerator Typing(){
@@ -23,6 +35,4 @@ public class NPCDialogue : MonoBehaviour
         yield return new WaitForSeconds(wordSpeed);
       }
     }
-
-    public 
 }
