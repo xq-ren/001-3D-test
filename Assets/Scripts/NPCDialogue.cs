@@ -1,18 +1,28 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class NPCDialogue : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public GameObject dialoguePanel;
+    public Text dialogueText;
+    public string[] dialogue;
+    private int index;
 
-    // Update is called once per frame
+    public float wordSpeed;
+
     void Update()
     {
-        
+
     }
+
+    IEnumerator Typing(){
+      foreach(char letter in dialogue[index].ToCharArray()){
+        dialogueText.text += letter;
+        yield return new WaitForSeconds(wordSpeed);
+      }
+    }
+
+    public 
 }
