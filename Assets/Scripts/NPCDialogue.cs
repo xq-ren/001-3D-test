@@ -6,16 +6,16 @@ using UnityEngine.UI;
 public class NPCDialogue : MonoBehaviour
 {
     public GameObject dialoguePanel;
-    public Text dialogueText;
+    //public Text dialogueText;
     public string[] dialogue;
     private int index;
 
     public float wordSpeed;
 
-    void Update()
+    public void Update()
     {
       if (dialoguePanel.activeInHierarchy) {
-        zeroText();
+        //zeroText();
       } else {
         dialoguePanel.SetActive(true);
         StartCoroutine(Typing());
@@ -23,15 +23,15 @@ public class NPCDialogue : MonoBehaviour
 
     }
 
-    public void zeroText(){
-      dialogueText.text = "";
+     /*public void zeroText(){
+      dialogueText.text = "slay";
       index = 0;
       dialoguePanel.SetActive(false);
-    }
+    }*/
 
     IEnumerator Typing(){
       foreach(char letter in dialogue[index].ToCharArray()){
-        dialogueText.text += letter;
+        //dialogueText.text += letter;
         yield return new WaitForSeconds(wordSpeed);
       }
     }
