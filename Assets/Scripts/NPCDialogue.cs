@@ -44,7 +44,7 @@ public class NPCDialogue : MonoBehaviour
       if (index < lines.Length - 1){
         index ++;
         textComponent.text = string.Empty;
-        StartDialogue();
+        StartCoroutine(TypeLine());
       } else {
         gameObject.SetActive(false);
       }

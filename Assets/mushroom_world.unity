@@ -7248,7 +7248,7 @@ MonoBehaviour:
   lines:
   - Howdy Pardner
   - What brings you here?
-  textSpeed: 0.3
+  textSpeed: 0.04
 --- !u!1 &1947223403
 GameObject:
   m_ObjectHideFlags: 0
