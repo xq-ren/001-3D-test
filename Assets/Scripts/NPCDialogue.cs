@@ -12,7 +12,7 @@ public class NPCDialogue : MonoBehaviour
 
     private int index;
 
-    void Start(){
+    public void Start(){
       textComponent.text = string.Empty;
       StartDialogue();
     }
