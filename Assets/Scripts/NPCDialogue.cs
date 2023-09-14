@@ -15,8 +15,6 @@ public class NPCDialogue : MonoBehaviour
 
     public void Start(){
       textComponent.text = "";
-      dialoguePanel.SetActive(false);
-      Update();
     }
 
     void Update(){
@@ -25,22 +23,17 @@ public class NPCDialogue : MonoBehaviour
         dialoguePanel.SetActive(true);
         StartCoroutine(TypeLine());
         }
-        else if (textComponent.text == lines[index]){
-          NextLine();
+        else if (Input.GetMouseButtonDown(0)) {
+          if (textComponent.text == lines[index]) {
+            NextLine();
+          } else {
+            StopAllCoroutines();
+            textComponent.text = lines[index];
+          }
         }
       }
-        
       if (Input.GetKeyDown(KeyCode.Q) && dialoguePanel.activeInHierarchy){
         RemoveText();
-      }
-
-      if (Input.GetMouseButtonDown(0)) {
-        if (textComponent.text == lines[index]) {
-          NextLine();
-        } else {
-          StopAllCoroutines();
-          textComponent.text = lines[index];
-        }
       }
     }
 

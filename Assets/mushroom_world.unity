@@ -12168,7 +12168,7 @@ MonoBehaviour:
   - howdy pardner!
   - its so sad steve jobs died of ligma
   textSpeed: 0.04
-  playerIsClose: 0
+  playerIsClose: 1
 --- !u!1 &2093245009
 GameObject:
   m_ObjectHideFlags: 0
