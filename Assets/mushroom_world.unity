@@ -517,6 +517,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2766520990056341028, guid: b4a79bd2a2c960f4f8f45e4014978a83, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2079278363}
+    - targetCorrespondingSourceObject: {fileID: 2766520990056341028, guid: b4a79bd2a2c960f4f8f45e4014978a83, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2079278366}
   m_SourcePrefab: {fileID: 100100000, guid: b4a79bd2a2c960f4f8f45e4014978a83, type: 3}
 --- !u!1 &222232240
 GameObject:
@@ -663,6 +666,7 @@ GameObject:
   - component: {fileID: 230086616}
   - component: {fileID: 230086615}
   - component: {fileID: 230086617}
+  - component: {fileID: 230086618}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -734,6 +738,18 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   orientation: {fileID: 1433644998}
+--- !u!114 &230086618
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 230086614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c383046fb3d924826a158fbad8724dae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &242092428
 GameObject:
   m_ObjectHideFlags: 0
@@ -7164,7 +7180,6 @@ GameObject:
   - component: {fileID: 1870775639}
   - component: {fileID: 1870775641}
   - component: {fileID: 1870775640}
-  - component: {fileID: 1870775642}
   m_Layer: 5
   m_Name: DialoguePanel
   m_TagString: Untagged
@@ -7232,23 +7247,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1870775638}
   m_CullTransparentMesh: 1
---- !u!114 &1870775642
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1870775638}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: efc02402cfcf848819ec79a111338b9f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  textComponent: {fileID: 872473058}
-  lines:
-  - Howdy Pardner
-  - What brings you here?
-  textSpeed: 0.04
 --- !u!1 &1947223403
 GameObject:
   m_ObjectHideFlags: 0
@@ -12152,6 +12150,25 @@ CapsuleCollider:
   m_Height: 1.8
   m_Direction: 1
   m_Center: {x: 0, y: 0.94, z: 0}
+--- !u!114 &2079278366
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2079278359}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efc02402cfcf848819ec79a111338b9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textComponent: {fileID: 872473058}
+  dialoguePanel: {fileID: 1870775638}
+  lines:
+  - howdy pardner!
+  - its so sad steve jobs died of ligma
+  textSpeed: 0.04
+  playerIsClose: 0
 --- !u!1 &2093245009
 GameObject:
   m_ObjectHideFlags: 0
